@@ -23,7 +23,7 @@ Bitnami charts can be used with [Kubeapps](https://kubeapps.com/) for deployment
 
 You can choose any of the two Redis&trade; Helm charts for deploying a Redis&trade; cluster.
 
-1. [Redis&trade; Helm Chart](https://github.com/bitnami/charts/tree/master/bitnami/redis) will deploy a master-slave cluster, with the [option](https://github.com/bitnami/charts/tree/master/bitnami/redis#redistm-sentinel-configuration-parameters) of enabling using Redis&trade; Sentinel.
+1. [Redis&trade; Helm Chart](https://github.com/bitnami/charts/tree/master/bitnami/redis) will deploy a master-slave cluster, with the [option](https://github.com/bitnami/charts/tree/master/bitnami/redis#redis-sentinel-configuration-parameters) of enabling using Redis&trade; Sentinel.
 2. [Redis&trade; Cluster Helm Chart](https://github.com/bitnami/charts/tree/master/bitnami/redis-cluster) will deploy a Redis&trade; Cluster topology with sharding.
 
 The main features of each chart are the following:
@@ -402,6 +402,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | `metrics.image.tag`                          | Redis&trade; Redis&trade; Exporter image tag (immutable tags are recommended)                    | `1.33.0-debian-10-r27`   |
 | `metrics.image.pullPolicy`                   | Redis&trade; Exporter image pull policy                                                          | `IfNotPresent`           |
 | `metrics.image.pullSecrets`                  | Redis&trade; Exporter image pull secrets                                                         | `[]`                     |
+| `metrics.command`                            | Override default metrics container init command (useful when using custom images)                | `[]`                     |
 | `metrics.redisTargetHost`                    | A way to specify an alternative Redis&trade; hostname                                            | `localhost`              |
 | `metrics.extraArgs`                          | Extra arguments for Redis&trade; exporter, for example:                                          | `{}`                     |
 | `metrics.containerSecurityContext.enabled`   | Enabled Redis&trade; exporter containers' Security Context                                       | `true`                   |
