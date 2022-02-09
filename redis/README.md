@@ -160,6 +160,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | `master.podSecurityContext.fsGroup`         | Set Redis&trade; master pod's Security Context fsGroup                                            | `1001`                   |
 | `master.containerSecurityContext.enabled`   | Enabled Redis&trade; master containers' Security Context                                          | `true`                   |
 | `master.containerSecurityContext.runAsUser` | Set Redis&trade; master containers' Security Context runAsUser                                    | `1001`                   |
+| `master.kind`                               | Use either Deployment or StatefulSet (default)                                                    | `StatefulSet`            |
 | `master.schedulerName`                      | Alternate scheduler for Redis&trade; master pods                                                  | `""`                     |
 | `master.updateStrategy.type`                | Redis&trade; master statefulset strategy type                                                     | `RollingUpdate`          |
 | `master.priorityClassName`                  | Redis&trade; master pods' priorityClassName                                                       | `""`                     |
@@ -630,7 +631,7 @@ As an alternative, you can use of the preset configurations for pod affinity, po
 
 ## Troubleshooting
 
-Find more information about how to deal with common errors related to Bitnami���s Helm charts in [this troubleshooting guide](https://docs.bitnami.com/general/how-to/troubleshoot-helm-chart-issues).
+Find more information about how to deal with common errors related to Bitnami's Helm charts in [this troubleshooting guide](https://docs.bitnami.com/general/how-to/troubleshoot-helm-chart-issues).
 
 ## Upgrading
 
